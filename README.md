@@ -1,0 +1,2 @@
+# teskosme-be
+iki tes
