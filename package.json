@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "nodemon index.js",
-    "start:dev": "nodemon index.js"
+    "start:dev": "nodemon index.js",
+    "build": "nodemon index.js"
   },
   "engines": {
     "node": "14.15.1",
