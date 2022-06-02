@@ -22,17 +22,19 @@ try {
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   res.send(`
   <div style="text-align:center">
     <div">API Kosme</div>
   </div>
   `);
-})
+});
 app.use("/car", carRoute);
 app.use("/plat", platRoute);
 app.use("/driver", driverRoute);
 app.use("/pivot", pivotRoute);
 app.use("/tracking", trackingRoute);
 
-app.listen(process.env.PORT || 5000, () => console.log("server running at port 5000"));
+app.listen(process.env.PORT || 5000, () =>
+  console.log("server running at port 5000")
+);
