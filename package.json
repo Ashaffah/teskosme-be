@@ -1,0 +1,31 @@
+{
+  "name": "kosme-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "engines": {
+    "node": "14.15.1",
+    "npm": "6.14.8"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "npm": "^8.5.5",
+    "sequelize": "^6.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
