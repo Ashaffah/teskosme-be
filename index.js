@@ -38,3 +38,5 @@ app.use("/tracking", trackingRoute);
 app.listen(process.env.PORT || 5000, () =>
   console.log("server running at port 5000")
 );
+
+module.exports = app;
