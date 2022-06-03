@@ -108,3 +108,4 @@ uploads/
 
 #config database
 config/database.js
+.vercel
