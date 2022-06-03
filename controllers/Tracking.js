@@ -32,7 +32,7 @@ export const updateTracking = async (req, res) => {
   Tracking.update(payload, {
     where: {
       id: req.params.id,
-    }
+    },
   })
     .then((result) => {
       res.status(200).json({
@@ -45,40 +45,53 @@ export const updateTracking = async (req, res) => {
 };
 
 export const getAllTracking = async (req, res) => {
-
   const currentPage = req.query.page || 1;
   const perPage = req.query.perPage || 10;
 
-  let query = {}
+  let query = {};
 
-  query.where = {}
-  query.include = [{ model: Car }, { model: Plat }, { model: Armada }, { model: Driver }];
-  query.attributes = { exclude: ["armada_id", "kendaraan_id", "plat_id", "driver_id"] };
+  query.where = {};
+  query.include = [
+    { model: Car },
+    { model: Plat },
+    { model: Armada },
+    { model: Driver },
+  ];
+  query.attributes = {
+    exclude: ["armada_id", "kendaraan_id", "plat_id", "driver_id"],
+  };
   query.offset = (parseInt(currentPage) - 1) * parseInt(perPage);
   query.limit = parseInt(perPage);
 
   Tracking.findAndCountAll(query)
-    .then(result => {
+    .then((result) => {
       res.status(200).json({
-        message: 'Success get Data Tracking',
+        message: "Success get Data Tracking",
         data: result.rows,
         total_data: result.count,
         per_page: parseInt(perPage),
         current_page: parseInt(currentPage),
-      })
+      });
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       next(err);
-    })
+    });
 };
 
 export const getTrackingById = async (req, res) => {
   try {
-    let query = {}
-    query.where = { id: req.params.id }
-    query.include = [{ model: Car }, { model: Plat }, { model: Armada }, { model: Driver }];
-    query.attributes = { exclude: ["armada_id", "kendaraan_id", "plat_id", "driver_id"] };
+    let query = {};
+    query.where = { id: req.params.id };
+    query.include = [
+      { model: Car },
+      { model: Plat },
+      { model: Armada },
+      { model: Driver },
+    ];
+    query.attributes = {
+      exclude: ["armada_id", "kendaraan_id", "plat_id", "driver_id"],
+    };
 
     const product = await Tracking.findAll(query);
     res.json(product[0]);

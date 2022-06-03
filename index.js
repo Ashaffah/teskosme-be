@@ -8,6 +8,7 @@ import trackingRoute from "./routes/tracking.js";
 import cors from "cors";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+// import product from "./api/product.js";
 
 dotenv.config();
 const app = express();
@@ -19,6 +20,7 @@ try {
   console.error("Connection error", error);
 }
 
+// app.use("/api/product", product);
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
