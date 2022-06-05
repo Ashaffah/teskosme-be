@@ -107,5 +107,5 @@ dist
 uploads/
 
 #config database
-config/database.js
+config/database2.js
 .vercel
