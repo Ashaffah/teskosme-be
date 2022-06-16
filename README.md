@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/danangarif202/backend-rfda.git
+git remote add origin https://gitlab.com/Ashaffah/teskosme-be.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/danangarif202/backend-rfda/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.com/Ashaffah/teskosme-be/-/settings/integrations)
 
 ## Collaborate with your team
 
